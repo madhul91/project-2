@@ -6,7 +6,12 @@ import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 5000;
 // const cors = require('cors');mport cors from 'cors';
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+    origin: 'https://project-2-frontend-9686.vercel.app', 
+    methods: 'GET,POST',
+    allowedHeaders: 'Content-Type',
+};
 
 
 app.use(bodyParser.json({ limit: '10mb' }));
