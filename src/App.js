@@ -19,7 +19,7 @@ function App() {
       if (!parsed.data) throw new Error("Missing 'data' field");
 
       setError("");
-      const res = await fetch("http://localhost:5000/bfhl", {
+      const res = await fetch("https://project-2-2-pgn5.onrender.com/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed)
